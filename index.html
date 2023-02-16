@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <img src="0.png" alt="Mizli">
+        <div class="title">Mizli's stats calculator</div>
+        <img src="1.png" alt="Mizli">
+    </div>
+
+    <div class="stats">
+        <div class="subStats1">
+            <img src="2.png" alt="Mizli">
+            <p style="font-size: 20px;">Mizli</p>
+            <p id="mizHp">Health: 1180</p>
+            <p id="mizAtk">Damage: 1200</p>
+            <p id="mizDps">DPS: 123</p>
+        </div>
+        <div class="subStats2">
+            <img src="3.png" alt="Marinmizu">
+            <p style="font-size: 20px;">Marinmizu</p>
+            <p id="marinHp">Health: 2460</p>
+            <p id="marinAtk">Damage: 2320</p>
+            <p id="marinDps">DPS: 238</p>
+        </div>
+        <div class="subStats3">
+            <img src="4.png" alt="Mizuririn">
+            <p style="font-size: 20px;">Mizuririn</p>
+            <p id="mizuHp">Health: 3010</p>
+            <p id="mizuAtk">Damage: 2870</p>
+            <p id="mizuDps">DPS: 295</p>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <p>Level: <input type="number" id="level" value="1" onchange="calculation()"></p>
+        <p>Legendary Cat Shield: <input type="number" id="shield" value="0" onchange="calculation()"> %</p>
+        <p>Legendary Cat Sword: <input type="number" id="sword" value="0" onchange="calculation()"> %</p>
+        <p>Has talents? <input type="checkbox" id="talents" onchange="calculation()"></p>
+        <div id="talented">
+            <p>Health Buff level: <input type="number" id="hpTalent" value="0" onchange="calculation()"></p>
+            <p>Attack Buff level: <input type="number" id="atkTalent" value="0" onchange="calculation()"></p>
+            <p>Talent orb: <select id="orb" onchange="calculation()">
+                <option value="0"></option>
+                <option value="def">Defense Up</option>
+                <option value="atk">Attack Up</option>
+                <option value="res">Resistance Up</option>
+            </select></p>
+            <p>Talent orb grade: <select id="grade" onchange="calculation()">
+                <option value="0"></option>
+                <option value="5">S</option>
+                <option value="4">A</option>
+                <option value="3">B</option>
+                <option value="2">C</option>
+                <option value="1">D</option>
+            </select></p>
+        </div>
+        <p>Against alien? <input type="checkbox" id="aliens" onchange="calculation()"></p>
+        <p id="treasures">Anti-alien abilities magnification: <input type="number" id="treasure" value="0" onchange="calculation()"> %</p>
+    </div>
+</body>
+</html>

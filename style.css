@@ -1,0 +1,68 @@
+body
+{
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.top
+{
+    display: flex;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.top img
+{
+    height: 50px;
+}
+.title
+{
+    padding: 10px 15px 0px 15px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.stats
+{
+    display: flex;
+    float: left;
+    width: 45%;
+}
+.stats div
+{
+    padding: 10px;
+    width: 150px;
+}
+.stats p
+{
+    margin: 0px;
+}
+.subStats1
+{
+    background-color: #a3d7ff;
+}
+.subStats2
+{
+    background-color: #117bff;
+}
+.subStats3
+{
+    background-color: #115fff;
+}
+.calculator
+{
+    padding: 10px;
+    float: left;
+    width: 45%;
+}
+
+#talented
+{
+    display: none;
+    background-color: #7f7f7f;
+}
+#treasures
+{
+    display: none;
+    background-color: #7f7f7f;
+}

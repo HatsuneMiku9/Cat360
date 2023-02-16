@@ -48,40 +48,29 @@ function calculation()
         mizuHp *= (1 + (59 * 0.2) + (20 * 0.1) + ((document.getElementById("level").value - 80) * 0.05));
         mizuAtk *= (1 + (59 * 0.2) + (20 * 0.1) + ((document.getElementById("level").value - 80) * 0.05));
     }
-    if (document.getElementById("talents").checked)
+    mizuHp *= 1 + document.getElementById("hpTalent").value / 50;
+    mizuAtk *= 1 + document.getElementById("atkTalent").value / 50;
+    if (document.getElementById("orb").value == "def")
     {
-        document.getElementById("talented").style.display = "block";
-        document.getElementById("atkTalent");
-        document.getElementById("talented").style.display = "block";
-        mizuHp *= 1 + document.getElementById("hpTalent").value / 50;
-        mizuAtk *= 1 + document.getElementById("atkTalent").value / 50;
-        if (document.getElementById("orb").value == "def")
-        {
-            mizuHp *= 1 + document.getElementById("grade").value * 0.04;
-        }
-        if (document.getElementById("orb").value == "atk")
-        {
-            mizuAtk *= 1 + document.getElementById("grade").value * 0.04;
-        }
-        if (document.getElementById("orb").value == "res" && document.getElementById("aliens").checked)
-        {
-            mizuHp /= 1 - document.getElementById("grade").value * 0.05;
-        }
+        mizuHp *= 1 + document.getElementById("grade").value * 0.04;
     }
-    else
+    if (document.getElementById("orb").value == "atk")
     {
-        document.getElementById("talented").style.display = "none";
+        mizuAtk *= 1 + document.getElementById("grade").value * 0.04;
     }
     if (document.getElementById("aliens").checked)
     {
-        document.getElementById("treasures").style.display = "block";
         mizHp *= 4 + document.getElementById("treasure").value / 300;
         marinHp *= 4 + document.getElementById("treasure").value / 300;
         mizuHp *= 4 + document.getElementById("treasure").value / 300;
     }
-    else
+    if (document.getElementById("combo").value == "comboDef")
     {
-        document.getElementById("treasures").style.display = "none";
+        mizuHp *= 1 + document.getElementById("comboBoost").value * 0.1;
+    }
+    if (document.getElementById("combo").value == "comboAtk" && document.getElementById("comboBoost").value > 0)
+    {
+        mizuAtk *= 1.05 + document.getElementById("comboBoost").value * 0.05;
     }
     mizDps = mizAtk / 292 * 30;
     marinDps = marinAtk / 292 * 30;
@@ -98,10 +87,4 @@ function calculation()
     document.getElementById("mizuAtk").innerHTML = "Damage: " + Math.round(mizuAtk);
     document.getElementById("mizuDps").innerHTML = "DPS: " + Math.round(mizuDps);
     document.getElementById("mizuDps").title = "DPS: " + mizuDps;
-    /*if (document.getElementById("aliens").checked)
-    {
-        document.getElementById("mizHp").innerHTML += " (" + Math.round(mizHp) * 4 + ")";
-        document.getElementById("marinHp").innerHTML += " (" + Math.round(marinHp) * 4 + ")";
-        document.getElementById("mizuHp").innerHTML += " (" + Math.round(mizuHp) * 4 + ")";
-    }*/
 }

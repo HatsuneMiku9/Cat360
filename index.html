@@ -43,27 +43,34 @@
         <p>Level: <input type="number" id="level" value="1" onchange="calculation()"></p>
         <p>Legendary Cat Shield: <input type="number" id="shield" value="0" onchange="calculation()"> %</p>
         <p>Legendary Cat Sword: <input type="number" id="sword" value="0" onchange="calculation()"> %</p>
-        <p>Has talents? <input type="checkbox" id="talents" onchange="calculation()"></p>
-        <div id="talented">
-            <p>Health Buff level: <input type="number" id="hpTalent" value="0" onchange="calculation()"></p>
-            <p>Attack Buff level: <input type="number" id="atkTalent" value="0" onchange="calculation()"></p>
-            <p>Talent orb: <select id="orb" onchange="calculation()">
-                <option value="0"></option>
-                <option value="def">Defense Up</option>
-                <option value="atk">Attack Up</option>
-                <option value="res">Resistance Up</option>
-            </select></p>
-            <p>Talent orb grade: <select id="grade" onchange="calculation()">
-                <option value="0"></option>
-                <option value="5">S</option>
-                <option value="4">A</option>
-                <option value="3">B</option>
-                <option value="2">C</option>
-                <option value="1">D</option>
-            </select></p>
-        </div>
+        <p>Health Buff talent level: <input type="number" id="hpTalent" value="0" onchange="calculation()"></p>
+        <p>Attack Buff talent level: <input type="number" id="atkTalent" value="0" onchange="calculation()"></p>
+        <p>Talent orb: <select id="orb" onchange="calculation()">
+            <option value="0"></option>
+            <option value="def">Defense Up</option>
+            <option value="atk">Attack Up</option>
+        </select></p>
+        <p>Talent orb grade: <select id="grade" onchange="calculation()">
+            <option value="0"></option>
+            <option value="5">S</option>
+            <option value="4">A</option>
+            <option value="3">B</option>
+            <option value="2">C</option>
+            <option value="1">D</option>
+        </select></p>
         <p>Against alien? <input type="checkbox" id="aliens" onchange="calculation()"></p>
-        <p id="treasures">Anti-alien abilities magnification: <input type="number" id="treasure" value="0" onchange="calculation()"> %</p>
+        <p>Enigma fruit: <input type="number" id="treasure" value="0" onchange="calculation()"> %</p>
+        <p>Cat Combo: <select id="combo" onchange="calculation()">
+            <option value="0"></option>
+            <option value="comboDef">Unit Defense Up</option>
+            <option value="comboAtk">Unit Attack Up</option>
+        </select></p>
+        <p>Cat Combo boost: <select id="comboBoost" onchange="calculation()">
+            <option value="0"></option>
+            <option value="3">L</option>
+            <option value="2">M</option>
+            <option value="1">Sm</option>
+        </select></p>
     </div>
 </body>
 </html>
